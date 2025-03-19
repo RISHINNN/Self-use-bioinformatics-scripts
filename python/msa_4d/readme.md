@@ -10,16 +10,18 @@
 - 详细的日志和统计信息输出
 
 ## 完整参数列表
-必要参数:  
-  --input_dir DIR          包含CDS文件的目录 (默认: ".")  
-  --output_dir DIR         输出文件目录 (默认: "./output")  
+- 必要参数:  
+  --input_dir DIR          包含CDS文件的目录 (默认: ".")
+   
+  --output_dir DIR         输出文件目录 (默认: "./output")
+    
   --aligner {prank,muscle,mafft}    
                            使用的比对工具 (默认: "prank")     
   --prank_path PATH        PRANK可执行文件的绝对路径 (选择prank时必需)   
   --muscle_path PATH       MUSCLE可执行文件的绝对路径 (选择muscle时必需)   
   --mafft_path PATH        MAFFT可执行文件的绝对路径 (选择mafft时必需)   
   
-常用选项:  
+- 常用选项:  
   --supergene_output FILE  超基因输出文件名 (默认: "supergene_4d.fasta")   
   --threads N              并行处理的线程数 (默认: 4)   
   --no_codon_aware         禁用密码子感知比对 (默认启用)   
@@ -30,7 +32,7 @@
   --log_level {DEBUG,INFO,WARNING,ERROR}   
                            设置日志级别 (默认: INFO)   
 
-TrimAl相关选项:  
+- TrimAl相关选项:  
   --use_trimal            使用TrimAl修剪蛋白质比对  
   --trimal_path PATH      TrimAl可执行文件的绝对路径  
   --trimal_automated      使用TrimAl自动化修剪方法 (默认: True)  
@@ -41,7 +43,7 @@ TrimAl相关选项:
                           TrimAl保守性阈值  
   --trim_supergene        对最终蛋白质超基因应用TrimAl   
   
-高级选项:  
+- 高级选项:  
   --f N                   PRANK插入开放概率 (默认: 0.2)  
   --gaprate N             PRANK缺口开放率  
   --gapext N              PRANK缺口扩展概率  

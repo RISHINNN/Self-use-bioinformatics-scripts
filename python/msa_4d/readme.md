@@ -15,8 +15,7 @@
    
   --output_dir DIR         输出文件目录 (默认: "./output")
     
-  --aligner {prank,muscle,mafft}    
-                           使用的比对工具 (默认: "prank")
+  --aligner {prank,muscle,mafft}  使用的比对工具 (默认: "prank")   
   
   --prank_path PATH        PRANK可执行文件的绝对路径 (选择prank时必需)
   
@@ -31,9 +30,7 @@
   
   --no_codon_aware         禁用密码子感知比对 (默认启用)
    
-  --duplicate_strategy {longest,first,rename,alignment_quality}
-    
-                           处理重复物种的策略 (默认: alignment_quality)
+  --duplicate_strategy {longest,first,rename,alignment_quality}    处理重复物种的策略 (默认: alignment_quality)
    
   --skip_existing          如果比对文件已存在则跳过处理
   

@@ -1,10 +1,8 @@
-#!/dellfsqd2/ST_OCEAN/USER/lishuo11/01_soft/mambaforge/bin/python
+
 import sys
 import io
 import os
 import argparse
-import getopt
-sys.path.append('/dellfsqd2/ST_OCEAN/USER/lishuo11/01_soft/mambaforge/lib/python3.10/site-packages/')
 import re
 from Bio import Phylo # Bio.Phylo is now only used if --replace is NOT specified
 

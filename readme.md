@@ -35,9 +35,9 @@ The main creators include:
 
   <tr>
     <td>十七岁天菜少年</td>
-    <td>NOGOOD.Lee</td>
+    <td></td>
     <td>18137879861@163.com</td>
-    <td>船到桥头自然沉</td>
+    <td></td>
   </tr>
 
   <tr>

@@ -18,20 +18,6 @@ The main creators include:
     <td>shiyeyishang@outlook.com</td>
     <td>https://bioinformls.com  https://www.researchgate.net/profile/Shuo_Li37 </td>
   </tr>
-  
-  <tr>
-    <td>百变小樱李</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>孙志珑</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
 
   <tr>
     <td>十七岁天菜少年</td>
@@ -54,12 +40,5 @@ The main creators include:
     <td></td>
   </tr>
 
-  <tr>
-    <td>廖端</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
 </table>
 

@@ -26,11 +26,11 @@ gemma-0.98.5-linux-static-AMD64 -bfile ${sp_name}3 -k output/kin.sXX.txt -lmm 4 
 ln -s output/${sp_name}_gwas_lmm.assoc.txt
 
 csvtk -t cut -f 1,2,3,15 ${sp_name}_gwas_lmm.assoc.txt | sed '1d' | csvtk cut -t -f 2,2,4 | sed 's/_/\t/2' | csvtk -t add-header -n SNP_id,CHR,BP,P > ${sp_name}_gwas_lmm.assoc.txt.p
-zhuanhuan.py ${sp_name}_gwas_lmm.assoc.txt.p ${sp_name}_gwas_lmm.assoc.txt.p.deal 4
+python zhuanhuan.py ${sp_name}_gwas_lmm.assoc.txt.p ${sp_name}_gwas_lmm.assoc.txt.p.deal 4
 
-QQplot.r ${sp_name}_gwas_lmm.assoc.txt.p.deal &> lamda.txt
+Rscript QQplot.r ${sp_name}_gwas_lmm.assoc.txt.p.deal &> lamda.txt
 ## change significant value here
-Manhattan.r ${sp_name}_gwas_lmm.assoc.txt.p.deal gwas_lmm.mhd 4.35E-5 2.17E-3
+Rscript Manhattan.r ${sp_name}_gwas_lmm.assoc.txt.p.deal gwas_lmm.mhd 4.35E-5 2.17E-3
 
 rm ${sp_name}1* ${sp_name}2* ${sp_name}_gwas_lmm.assoc.txt.p
 

@@ -43,10 +43,8 @@ bcftools view --threads ${cpu} -S female.list ${input_vcf} -O z -o females.vcf.g
 vcftools --gzvcf males.vcf.gz --hardy --out males_hardy
 vcftools --gzvcf females.vcf.gz --hardy --out females_hardy
 
-cp /dellfsqd2/ST_OCEAN/USER/lishuo1/08_shell/calc_sex_het.py
-cp /dellfsqd2/ST_OCEAN/USER/lishuo1/08_shell/find_sdr_region.py
-./calc_sex_het.py
-./find_sdr_region.py
+python calc_sex_het.py
+python find_sdr_region.py
 sort -k 5nr,5 sex_heterozygosity_diff.csv > sex_heterozygosity_diff.sort.tsv
 
 rm males.vcf.gz females.vcf.gz sex_heterozygosity_diff.csv

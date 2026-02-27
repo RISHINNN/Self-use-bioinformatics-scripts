@@ -1,0 +1,1 @@
+../blast/blast-costom-outformat.sh

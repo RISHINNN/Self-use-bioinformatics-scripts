@@ -1,5 +1,7 @@
 #!/bin/bash
 set +o posix
+set -eo pipefail
+#export BLAST_USAGE_REPORT=false
 
 if [[ $# == '0' ]]; then
     echo "usage: bidui target query fasta_type soft output_name cpu"
@@ -16,6 +18,7 @@ fasta_type=$3
 soft=$4
 output_name=$5
 cpu=$6
+soft_path=ncbi-blast-2.13.0+/bin
 
-makeblastdb -in ${target} -dbtype ${fasta_type} -out ./blastdb/${target}
-${soft} -task ${soft} -db ./blastdb/${target} -query ${query} -out ${output_name} -outfmt '7 qseqid qstart qend sseqid sstart send qlen slen length pident evalue' -num_threads ${cpu}
+${soft_path}/makeblastdb -in ${target} -dbtype ${fasta_type} -out ./blastdb/${target} -parse_seqids
+${soft_path}/${soft} -task ${soft} -db ./blastdb/${target} -query ${query} -out ${output_name} -outfmt '7 qseqid qstart qend sseqid sstart send qlen slen length pident evalue' -num_threads ${cpu}
